@@ -14,8 +14,7 @@ title = "Will's Blog"
     [params.sidebar]
         emoji = "🍥"
         avatar = "img/avatar.jpg"
-        subtitle = "Do not go gentle into that good 
-night."
+        subtitle = "Do not go gentle into that good night."
     [params.article]
         [params.article.license]
             enabled = true 
