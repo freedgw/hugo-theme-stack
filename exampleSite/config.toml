@@ -1,8 +1,8 @@
-baseurl = "https://example.com/"
+baseurl = "https://blog.coldzone.top/"
 languageCode = "en-us"
 theme = "hugo-theme-stack"
 paginate = 5
-title = "Example Site"
+title = "Will's Blog"
 
 [permalinks]
     post = "/p/:slug/"
@@ -14,7 +14,7 @@ title = "Example Site"
     [params.sidebar]
         emoji = "🍥"
         avatar = "img/avatar.png"
-        subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        subtitle = "Do not go gentle into that goodnight."
     [params.article]
         [params.article.license]
             enabled = true 
