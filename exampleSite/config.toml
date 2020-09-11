@@ -13,7 +13,7 @@ title = "Will's Blog"
     favicon = ""
     [params.sidebar]
         emoji = "🍥"
-        avatar = "img/avatar.png"
+        avatar = "img/avatar.jpg"
         subtitle = "Do not go gentle into that goodnight."
     [params.article]
         [params.article.license]
