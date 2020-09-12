@@ -10,7 +10,7 @@ title = "Will's Blog"
     
 [params]
     mainSections = ["post"]
-    favicon = ""
+    favicon = "img/avatar.jpg"
     [params.sidebar]
         emoji = "🍥"
         avatar = "img/avatar.jpg"
