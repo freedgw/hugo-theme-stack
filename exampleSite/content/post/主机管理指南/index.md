@@ -11,7 +11,7 @@ categories = [
     "vps",
     "linux",
 ]
-image="linux.jpg"
+image="kevin-horvat-Pyjp2zmxuLk-unsplash.jpg"
 +++
 <!--more-->
 # 主机管理指南
