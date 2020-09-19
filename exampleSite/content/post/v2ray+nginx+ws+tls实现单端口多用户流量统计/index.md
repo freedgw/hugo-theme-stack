@@ -262,11 +262,11 @@ vi命令 __ggdG__ 会删除文件内的所有内容
 
 复制按照上述说明已经修改好的配置文件，粘贴到v2ray的配置文件里
 
-然后输入__:wq__保存退出
+然后**输入:wq** 保存退出
 
 ps: 推荐小白用finalshell cd到config.json目录下直接在下面打开该文件进行删除粘贴再保存的操作，也可以用nano,界面有详细的操作说明
 
-然后输入__:wq__保存退出
+然后**输入:wq**保存退出
 
 3. 重启v2ray服务
 
@@ -309,17 +309,12 @@ v2ctl api --server=127.0.0.1:10085  StatsService.GetStats 'name: "user>>>bbb@goo
 解释一下换算关系：
 
 >  字节（Byte)=8bit
->
 >  Byte简写为B 
->
 > bit简写为b
->
 > 1KB=8Kb
 
 > $1GB=10^3 MB= 10^6 KB =10^9 Byte$
-
 按照换算关系计算一下消耗的流量
-
 测试上传：
 
 ![wIC1l6.png](https://s1.ax1x.com/2020/09/19/wIC1l6.png)
