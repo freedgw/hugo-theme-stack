@@ -30,6 +30,8 @@ title = "Will's Blog"
         defaultImage = ""
         [params.opengraph.twitter]
             site = ""
+    [params.comments]
+        enabled = true
      disqusShortname = "coldzone"
             
 [menu]
