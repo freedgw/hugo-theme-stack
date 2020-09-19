@@ -301,13 +301,10 @@ v2ctl api --server=127.0.0.1:10085  StatsService.GetStats 'name: "user>>>aaa@goo
 ```
 
 查看某用户下载流量(单位字节)：
-
 ```bash
 v2ctl api --server=127.0.0.1:10085  StatsService.GetStats 'name: "user>>>bbb@google.com>>>traffic>>>downlink" reset: false'
 ```
-
 解释一下换算关系：
-
 >  字节（Byte)=8bit
 >  Byte简写为B 
 > bit简写为b
@@ -316,19 +313,12 @@ v2ctl api --server=127.0.0.1:10085  StatsService.GetStats 'name: "user>>>bbb@goo
 > $1GB=10^3 MB= 10^6 KB =10^9 Byte$
 按照换算关系计算一下消耗的流量
 测试上传：
-
 ![wIC1l6.png](https://s1.ax1x.com/2020/09/19/wIC1l6.png)
-
 测试下载：
-
 ![wIC1l6.png](https://s1.ax1x.com/2020/09/19/wIC1l6.png)
-
 可看到正常工作
-
 这些基本上够用了，当然如果想要方便的话可以使用v2fly官网提供的代码保存做一个固定的一键脚本
-
 新建traffic.sh 文件，将以下内容粘贴到该文件中：
-
 ```bash
 #!/bin/bash
 
@@ -378,19 +368,16 @@ echo "-----------------------------"
 ```
 
 新建traffic.sh粘贴到其中保存即可
-
 ```bash
 vi traffic.sh
 ```
 
 授予traffic.sh执行权限
-
 ```bash
 chmod 755 traffic.sh
 ```
 
 执行：
-
 ```bash
 ./traffic.sh
 ```
