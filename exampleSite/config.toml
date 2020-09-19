@@ -53,6 +53,7 @@ disqusShortname = "coldzone"
         url = "/archive/"
         weight = -70
         pre = "archive"
+        
 
 [related]
     includeNewer = true
@@ -66,3 +67,5 @@ disqusShortname = "coldzone"
     [[related.indices]]
         name = "categories"
         weight = 200
+        
+disqusShortname = "coldzone"        
