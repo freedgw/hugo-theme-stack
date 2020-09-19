@@ -377,4 +377,4 @@ v2+ws+tls是当下最为安全的科学上网方式之一，然后对于该种�
 
 [https://guide.v2fly.org/advanced/traffic.html#%E6%9F%A5%E7%9C%8B%E6%B5%81%E9%87%8F%E4%BF%A1%E6%81%AF](https://guide.v2fly.org/advanced/traffic.html#%E6%9F%A5%E7%9C%8B%E6%B5%81%E9%87%8F%E4%BF%A1%E6%81%AF)
 
-<script id="dsq-count-scr" src="//coldzone.disqus.com/count.js" async></script>
+
