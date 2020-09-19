@@ -19,21 +19,16 @@ image="v2ray.jpg"
 # v2ray+nginx+ws+tls实现单端口多用户流量统计
 
 本文重在v2ray+nginx+ws+tls单端口多用户并且带有流量查询功能的配置，因此对于v2ray+nginx+ws+tls的安装直接使用了wulabing大佬的一键脚本。故之后将基于wulabing一键脚本得到的v2ray配置文件config.json进行说明。
-
 ssh客户端：FinalShell
 
 ## 一键脚本搭建v2ray+nginx+ws+tls
-
 首先域名解析到自己的ip上待解析生效后，用一键脚本按照提示安装完成v2ray+nginx+ws+tls。
-
 ```bash
 bash <(curl -L -s https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/install.sh) | tee v2ray_ins.log
 ```
-
 安装完成后,开始v2ray配置文件的修改
 
 ## 命令行下生成随机uuid
-
 ```bash
 cat /proc/sys/kernel/random/uuid 
 ```
@@ -43,7 +38,6 @@ cat /proc/sys/kernel/random/uuid
 将生成的uuid先复制到其它地方备用
 
 ## v2ray原始配置文件备份
-
 使用cat命令，将v2ray的配置文件显示出来，并复制到本地作为备份，其中有有效信息需要更改
 
 ```bash
@@ -51,7 +45,6 @@ cat /etc/v2ray/config.json
 ```
 
 将文件里的内容备份到本地
-
 ```json
 {
   "log": {
@@ -117,11 +110,9 @@ cat /etc/v2ray/config.json
   }
 
 ```
-
 **! 注意**，该配置中之后需要应用的新配置中的关键信息包括**inbounds**模块中的**port**值，以及**websocket的路径**
 
 ## 单端口多用户带流量统计的配置文件
-
 ```json
 {
     "stats": {},
@@ -229,14 +220,12 @@ cat /etc/v2ray/config.json
 ```
 
 这份配置文件可以视作一个标准的配置模板，为了与符合原配置文件和nginx的交流规则，你所需要改动的地方是：
-
 - **inbounds**模块中的**port**值，本例中为33145
 - 以及**websocket的路径**，本例中为/982546d18747e3/
 - 用户模块，本例中给出了aaa@google.com, bbb@google.com, ccc@google.com三位用户，借以不同的uuid区分他们的不同身份，email的名称将在之后用于查询各用户所使用的流量情况，你也可以自己新增用户。
 - **一个需要注意的地方是在新增一个用户时，需要在上一个用户模块的结尾增添逗号**
 
 一个用户模块的示例：
-
 ```json
 {
                         "email": "ccc@google.com",
@@ -249,53 +238,36 @@ cat /etc/v2ray/config.json
 uuid是确立身份的核心，而email则是我们方便的辨识的一个别名。
 
 ## 新配置文件覆盖旧配置文件
-
 1. 先删除原文件的所有内容
 
 ```bash
 vi /etc/v2ray/config.json
 ```
-
 vi命令 __ggdG__ 会删除文件内的所有内容
 
 2. 修改好的新配置覆盖
-
 复制按照上述说明已经修改好的配置文件，粘贴到v2ray的配置文件里
-
 然后**输入:wq** 保存退出
-
 ps: 推荐小白用finalshell cd到config.json目录下直接在下面打开该文件进行删除粘贴再保存的操作，也可以用nano,界面有详细的操作说明
-
 然后**输入:wq**保存退出
 
 3. 重启v2ray服务
-
 ```bash
 systemctl restart v2ray
 ```
-
 这样v2ray已经成功实现了单端口多用户的配置，整个过程不需要对nginx进行处理
-
 导入vmess链接后，可以先克隆该链接，再更改uuid顺便换个名称便于区分
-
 ![w5jzdI.png](https://s1.ax1x.com/2020/09/19/w5jzdI.png)
-
 测试三个链接是否可以正常使用：
-
 ![wICCYn.png](https://s1.ax1x.com/2020/09/19/wICCYn.png)
-
 测试显示均有速度，说明配置成功。
-
 ps: 不要在意我图中的速度快慢，我只是临时开了一台vultr专门写这个教程
 
 测试网页，三个链接也都可以打开谷歌，说明均是可用状态：
-
 ![wIVQET.png](https://s1.ax1x.com/2020/09/19/wIVQET.png)
 
 ## 单用户流量统计
-
 查看某用户上传流量(单位字节)：
-
 ```bash
 v2ctl api --server=127.0.0.1:10085  StatsService.GetStats 'name: "user>>>aaa@google.com>>>traffic>>>uplink" reset: false'
 ```
@@ -383,11 +355,8 @@ chmod 755 traffic.sh
 ```
 
 ![wIP2DO.png](https://s1.ax1x.com/2020/09/19/wIP2DO.png)
-
 这样可以看到全部的统计信息，下方可以一次性看到用户的流量使用情况。
-
 至此，本次教程的内容已完成，感谢wulabing, v2fly网站，loonlog.com提供的思路。
-
 v2+ws+tls是当下最为安全的科学上网方式之一，然后对于该种配置单端口多用户并且成功实现流量监控网上的例子似乎寥寥无几，故在他人的基础上出此教程希望对小白们所帮助。
 
 
