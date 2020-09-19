@@ -12,7 +12,7 @@ title = "Will's Blog"
     mainSections = ["post"]
     favicon = "img/avatar.jpg"
     [params.sidebar]
-       # emoji = "🍥"
+        emoji = "🐸"
         avatar = "img/avatar.jpg"
         subtitle = "Do not go gentle into that good night."
     [params.article]
