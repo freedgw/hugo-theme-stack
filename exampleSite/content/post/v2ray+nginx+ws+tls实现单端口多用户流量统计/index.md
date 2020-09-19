@@ -19,6 +19,7 @@ image="v2ray.jpg"
 # v2ray+nginx+ws+tls实现单端口多用户流量统计
 
 本文重在v2ray+nginx+ws+tls单端口多用户并且带有流量查询功能的配置，因此对于v2ray+nginx+ws+tls的安装直接使用了wulabing大佬的一键脚本。故之后将基于wulabing一键脚本得到的v2ray配置文件config.json进行说明。
+
 ssh客户端：FinalShell
 
 ## 一键脚本搭建v2ray+nginx+ws+tls
@@ -360,6 +361,7 @@ chmod 755 traffic.sh
 
 这样可以看到全部的统计信息，下方可以一次性看到用户的流量使用情况。
 至此，本次教程的内容已完成，感谢wulabing, v2fly网站，loonlog.com提供的思路。
+
 v2+ws+tls是当下最为安全的科学上网方式之一，然后对于该种配置单端口多用户并且成功实现流量监控网上的例子似乎寥寥无几，故在他人的基础上出此教程希望对小白们所帮助。
 
 
