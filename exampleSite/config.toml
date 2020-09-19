@@ -3,7 +3,6 @@ languageCode = "en-us"
 theme = "hugo-theme-stack"
 paginate = 5
 title = "Will's Blog"
-<script id="dsq-count-scr" src="//coldzone.disqus.com/count.js" async></script>
 [permalinks]
     post = "/p/:slug/"
     page = "/:slug/"
