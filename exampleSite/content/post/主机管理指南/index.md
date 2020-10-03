@@ -555,6 +555,35 @@ iptables -D INPUT 7
 iptables -F
 
 ```
+# 12. 修改DNS
+
+1.Centos
+编辑网卡配置文件
+
+```bash
+vi /etc/sysconfig/network-scripts/ifcfg-eth0
+```
+
+按i 修改 DNS1=8.8.8.8
+按esc 后依次按键 :wq 回车
+
+然后 重启网卡生效
+
+```bash
+service network restart
+```
+
+2.debian
+编辑dns配置文件
+
+按i 修改 DNS1=8.8.8.8
+
+```bash
+vi /etc/resolv.conf
+```
+
+按i 修改 DNS1=8.8.8.8
+
 
 
 
