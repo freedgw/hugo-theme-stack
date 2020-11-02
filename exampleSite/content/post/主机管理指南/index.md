@@ -305,6 +305,8 @@ apt-get update && apt-get install mtr -y
 # 然后就可以通过 mtr x.x.x.x 来路由追踪了。不过上面这个命令 是动态显示的，一直持续下去，除非手动终止。
 #如果你需要只发送 100个数据包（测试100次），那么你可以这样写： mtr -c 100 --report x.x.x.x
 #这个命令不会动态显示，只会在发送 100个数据包后，直接显示最终结果。
+# 测试三网回程
+wget -qO- git.io/besttrace | bash
 # vps性能测试
 curl -fsSL https://ilemonrain.com/download/shell/LemonBench.sh | bash
 ```
