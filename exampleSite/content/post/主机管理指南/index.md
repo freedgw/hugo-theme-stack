@@ -284,6 +284,8 @@ wget -qO- git.io/superbench.sh | bash
 wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/ZBench/master/ZBench-CN.sh && bash ZBench-CN.sh
 # 91yun
 wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/91yuntest/master/test.sh && bash test.sh -i "io,bandwidth,chinabw,download,traceroute,backtraceroute,allping"
+# 国内测速（最全）
+bash <(curl -Lso- https://git.io/superspeed)
 # 回程路由测试 1
 #下载
  wget https://cdn.ipip.net/17mon/besttrace4linux.zip
